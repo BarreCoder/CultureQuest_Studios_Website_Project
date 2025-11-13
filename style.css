@@ -59,6 +59,56 @@ h2{margin:0 0 12px;font-size:clamp(20px,3vw,28px)}
 
 /* Optional dark/light auto-theming if you ever switch */
 @media (prefers-color-scheme: light){
-  :root{ --bg:#fff; --fg:#111; --muted:#555; --card:#fafafa; --line:#e5e5e5; }
-  .btn.ghost{color:var(--accent);border-color:var(--accent)}
+  :root{
+    --bg:#ffffff;
+    --fg:#111111;
+    --muted:#555555;
+    --card:#f7f7f7;
+    --line:#dddddd;
+    --accent:#0078FF;
+  }
+
+  body{
+    background:var(--bg);
+    color:var(--fg);
+  }
+
+  .nav{
+    background:#ffffffcc;           /* soft translucent bar */
+    border-bottom-color:var(--line);
+    backdrop-filter:blur(12px);
+  }
+
+  .nav a{
+    color:var(--fg);
+  }
+
+  .nav-toggle{
+    background:#f5f5f5;
+    color:var(--fg);
+    border-color:var(--line);
+  }
+
+  .card{
+    background:var(--card);
+    border-color:var(--line);
+  }
+
+  .pillars li{
+    background:#ffffff;
+    border-color:var(--line);
+  }
+
+  .btn{
+    background:var(--accent);
+    color:#ffffff;
+    border-color:var(--accent);
+  }
+
+  .btn.ghost{
+    background:transparent;
+    color:var(--accent);
+    border-color:var(--accent);
+  }
 }
+
