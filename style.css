@@ -426,3 +426,73 @@ h2{
     border-color:#d8dbf0;
   }
 }
+/* === Softening pills & badges === */
+
+/* Hero tags: turn from pills into simple inline text */
+.hero-tags {
+  gap: 10px;
+}
+.hero-tags li {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Hero project labels: softer, more text-like */
+.hero-pill {
+  background: transparent;
+  border-radius: 6px;
+  border: none;
+  padding: 0;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* Status text: keep it, but don’t shout */
+.hero-status {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Project badges: lighter, more label than pill */
+.badge {
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 2px 6px;
+  font-size: 11px;
+}
+
+/* "Coming soon" – no bubble, just inline soft text */
+.coming-soon {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+/* === Soften card look & feel === */
+
+.card {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32);
+}
+
+/* Slightly more open spacing inside cards */
+.card p,
+.card .meta-list {
+  font-size: 14px;
+}
+
+/* On mobile, give a bit more breathing room between cards */
+@media (max-width: 640px) {
+  .card {
+    margin-block: 14px;
+  }
+}
+
