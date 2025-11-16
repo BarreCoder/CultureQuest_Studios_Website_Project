@@ -2,105 +2,216 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="theme-color" content="#0078FF">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1020">
   <title>CultureQuest Studios</title>
-  <meta name="description" content="CultureQuest Studios — Where Creativity Inspires Technology.">
+  <meta name="description" content="CultureQuest Studios — building context-aware, culture-aligned systems at the intersection of code, cognition, and culture.">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="/assets/icons/favicon.png" type="image/png">
 </head>
 <body>
   <header class="wrapper">
     <div class="nav">
-      <div class="brand">CultureQuest Studios</div>
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <span>CultureQuest Studios</span>
+      </div>
+
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         ☰
       </button>
+
       <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#pubs">Publications</a>
-        <a href="#contact" class="btn">Contact</a>
+        <a href="#contact" class="btn nav-cta">Contact</a>
       </nav>
     </div>
-    <div class="hero">
-      <h1>Shaping Tomorrow’s Systems — with the Human Element at Their Core.</h1>
-      <p>Human-centered innovation at the intersection of context, culture, and code.</p>
-      <div class="cta">
-        <a class="btn" href="#projects">View Portfolio</a>
-        <a class="btn ghost" href="#pubs">Read White Papers</a>
+
+    <section class="hero">
+      <div class="hero-main">
+        <p class="hero-kicker">Tech R&amp;D · Context · Culture · Code</p>
+        <h1>Shaping Tomorrow’s Systems — with the Human Element at Their Core.</h1>
+        <p class="hero-sub">
+          CultureQuest Studios explores systems that remember responsibly:
+          context-aware code intelligence, zero-knowledge memory, and
+          culture-aligned digital experiences.
+        </p>
+        <div class="cta">
+          <a class="btn" href="#projects">View Tech Portfolio</a>
+          <a class="btn ghost" href="#pubs">Read White Papers</a>
+        </div>
+        <ul class="hero-tags">
+          <li>Code Understanding</li>
+          <li>Private Memory Systems</li>
+          <li>Cultural Intelligence in Tech</li>
+        </ul>
       </div>
-    </div>
+
+      <aside class="hero-panel">
+        <div class="hero-panel-header">
+          <span class="dot red"></span>
+          <span class="dot amber"></span>
+          <span class="dot green"></span>
+          <span class="hero-panel-label">Active Concepts</span>
+        </div>
+        <div class="hero-panel-body">
+          <div class="hero-row">
+            <span class="hero-pill">First Look™</span>
+            <span class="hero-status">Prototype &nbsp;·&nbsp; Patent Pending</span>
+          </div>
+          <p>Contextual descriptors that sit on top of code artifacts and help humans “see” systems faster — without touching the source.</p>
+
+          <div class="hero-row">
+            <span class="hero-pill">CultureGrid™ / CAL</span>
+            <span class="hero-status">Research &nbsp;·&nbsp; Patent Pending</span>
+          </div>
+          <p>Faith-neutral cultural awareness layer for platforms that need to respect context, diversity, and nuance by design.</p>
+
+          <div class="hero-row">
+            <span class="hero-pill">Detangle™</span>
+            <span class="hero-status">Prototype &nbsp;·&nbsp; Patent Pending</span>
+          </div>
+          <p>Semantic theming over dependency graphs to give engineers an informed starting point instead of raw call chains.</p>
+        </div>
+      </aside>
+    </section>
   </header>
 
   <main class="wrapper">
     <section id="about" class="card">
       <h2>Technology With Conscience</h2>
       <p>
-        We build privacy-first, context-aware systems that help people understand complex software and
-        information ecosystems—anchoring intelligence in culture, clarity, and care.
+        CultureQuest Studios focuses on systems that make complex software and information ecosystems more humane:
+        privacy-first, context-aware, and culturally aware by default.
       </p>
-      <ul class="pillars">
-        <li><strong>Context Control</strong></li>
-        <li><strong>Cultural Awareness</strong></li>
-        <li><strong>Private Cognition</strong></li>
-      </ul>
+      <div class="about-grid">
+        <div class="about-item">
+          <h3>Context Control</h3>
+          <p>Surfacing the right level of explanation at the right point in the workflow so humans stay in control of insight, not buried in noise.</p>
+        </div>
+        <div class="about-item">
+          <h3>Cultural Awareness</h3>
+          <p>Designing digital experiences that respect festivals, rituals, identities, and local nuance without bias or overreach.</p>
+        </div>
+        <div class="about-item">
+          <h3>Private Cognition</h3>
+          <p>Memory frameworks that keep personal and organizational thought trails useful without exposing raw data or intent.</p>
+        </div>
+      </div>
     </section>
 
-
     <section id="projects">
-     <h2>Projects</h2>
+      <div class="section-heading">
+        <h2>Tech Projects &amp; IP</h2>
+        <p>Selected patent-backed initiatives exploring the next layer above today’s tools and platforms.</p>
+      </div>
+
       <div class="grid">
         <article class="card">
-          <h3>First Look™</h3>
-          <h3>(Patent Pending)</h3>
-          <p>Contextual Descriptors for Modern Code Exploration.</p>
-          <a href="/assets/WhitePapers/FirstLook_WhitePaper.pdf" class="link" target="_blank" rel="noopener">PDF / Video Demo</a>
+          <div class="card-header">
+            <h3>First Look™</h3>
+            <span class="badge">Patent Pending</span>
+          </div>
+          <p>Contextual descriptors and insights that sit alongside code artifacts, making large systems explorable in human language.</p>
+          <ul class="meta-list">
+            <li>Focus: Code exploration &amp; modernization</li>
+            <li>Form: VS Code prototype + web UI concepts</li>
+          </ul>
+          <p class="card-links">
+            <a href="/assets/WhitePapers/FirstLook_WhitePaper.pdf" class="link" target="_blank" rel="noopener">White Paper (PDF)</a>
+            <!-- <span>·</span>
+            <a href="#" class="link">Request Private Demo</a> -->
+          </p>
         </article>
+
         <article class="card">
-          <h3>Park My Thought™</h3>
-          <h3>(Patent Pending)</h3>
-          <p>Zero-Knowledge Memory Framework.</p>
-          <a href="#" class="link">PDF / Video Demo</a>
+          <div class="card-header">
+            <h3>Park My Thought™</h3>
+            <span class="badge">Patent Pending</span>
+          </div>
+          <p>Zero-knowledge memory framework that lets users “park” thoughts and recall them later without exposing their raw narrative.</p>
+          <ul class="meta-list">
+            <li>Focus: Personal cognition &amp; digital memory</li>
+            <li>Status: Concept &amp; system design</li>
+          </ul>
+          <p class="card-links">
+            <span class="coming-soon">White Paper coming soon</span>
+          </p>
         </article>
+
         <article class="card">
-          <h3>CultureGrid™ / CAL - Cultural Awareness Layer™</h3>
-          <h3>(Patent Pending)</h3>
-          <p>Faith-Neutral Cultural Awareness Layer.</p>
-          <a href="#" class="link">PDF / Medium</a>
+          <div class="card-header">
+            <h3>CultureGrid™ / CAL</h3>
+            <span class="badge">Patent Pending</span>
+          </div>
+          <p>Faith-neutral cultural awareness layer that helps platforms align reminders, feeds, and experiences with lived cultural calendars.</p>
+          <ul class="meta-list">
+            <li>Focus: Cultural intelligence in digital systems</li>
+            <li>Status: Provisional patent filed</li>
+          </ul>
+          <p class="card-links">
+            <span class="coming-soon">White Paper in progress</span>
+          </p>
         </article>
+
         <article class="card">
-          <h3>Detangle™</h3>
-          <h3>(Patent Pending)</h3>
-          <p>Semantic Theming of Dependency Graphs.</p>
-          <a href="#" class="link">PDF / Video Demo</a>
+          <div class="card-header">
+            <h3>Detangle™</h3>
+            <span class="badge">Patent Pending</span>
+          </div>
+          <p>Context-aware call graph overlay with semantic theming to reveal meaningful “stories” across dependencies, not just edges.</p>
+          <ul class="meta-list">
+            <li>Focus: System comprehension &amp; theming</li>
+            <li>Status: Provisional patent filed</li>
+          </ul>
+          <p class="card-links">
+            <span class="coming-soon">White Paper in progress</span>
+          </p>
         </article>
       </div>
     </section>
 
     <section id="pubs" class="card">
-      <h2>Publications & Press</h2>
+      <h2>Publications</h2>
+      <p>Formal write-ups and public artifacts around the core ideas.</p>
       <ul class="links">
-        <li><a href="/assets/WhitePapers/FirstLook_WhitePaper.pdf" class="link" target="_blank" rel="noopener">White Paper: First Look™</a></li>
-        <li><a href="#" target="_blank" rel="noopener">White Paper: Detangle™</a></li>
-        <li><a href="#" target="_blank" rel="noopener">LinkedIn Articles</a></li>
+        <li>
+          <a href="/assets/WhitePapers/FirstLook_WhitePaper.pdf" class="link" target="_blank" rel="noopener">
+            White Paper — First Look™: Contextual Descriptors as the Missing Layer in Code Exploration
+          </a>
+        </li>
+        <li>
+          <span class="coming-soon">Detangle™ · White Paper planned</span>
+        </li>
+        <li>
+          <span class="coming-soon">CultureGrid™ / CAL · White Paper planned</span>
+        </li>
+        <li>
+          <a href="#" target="_blank" rel="noopener">LinkedIn posts &amp; thought pieces (soon)</a>
+        </li>
       </ul>
-      <p class="legal">© 2025 CultureQuest Studios LLC. · All rights reserved.</p>
+      <p class="legal">© 2025 CultureQuest Studios LLC · All rights reserved. · Independent tech R&amp;D, built outside employer time and systems.</p>
     </section>
 
     <section id="contact" class="card">
       <h2>Contact</h2>
-      <p><a href="mailto:founder@culturequeststudios.com">founder@culturequeststudios.com</a></p>
+      <p>For collaborations, research conversations, or potential partnerships around these systems:</p>
+      <p>
+        <a href="mailto:founder@culturequeststudios.com">founder@culturequeststudios.com</a>
+      </p>
       <p>
         <a href="https://www.linkedin.com/in/culturequest-studios-566a9538b" target="_blank" rel="noopener">LinkedIn</a> ·
-        <a href="#" target="_blank" rel="noopener">YouTube</a> ·
+        <a href="#" target="_blank" rel="noopener">YouTube (tech demos)</a> ·
         <a href="#" target="_blank" rel="noopener">GitHub</a>
       </p>
-      <!-- If you need a form without a server, use Formspree or Netlify Forms -->
     </section>
   </main>
 
-  <script src="scripts.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
