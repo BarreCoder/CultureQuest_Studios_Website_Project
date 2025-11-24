@@ -1,217 +1,1037 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
+  <title>CultureQuest Studios – Systems That Remember Responsibly</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b1020">
-  <title>CultureQuest Studios</title>
-  <meta name="description" content="CultureQuest Studios — building context-aware, culture-aligned systems at the intersection of code, cognition, and culture.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="CultureQuest Studios – a personal innovation lab by Manish Bhat exploring systems that remember responsibly at the intersection of context, culture, cognition, and code."
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- External CSS -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="/assets/icons/favicon.png" type="image/png">
 </head>
 <body>
-  <header class="wrapper">
-    <div class="nav">
-      <div class="brand">
-        <span class="brand-mark"></span>
-        <span>CultureQuest Studios</span>
+  <!-- Sticky nav -->
+  <div class="nav-shell">
+  <header class="nav">
+    <div class="logo-mark">
+      <div class="logo-circle">CQS</div>
+      <div class="logo-text">
+        <span class="logo-name">CultureQuest Studios</span>
+        <spanm class="logo-subtext">context · culture · code</span>
       </div>
-
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        ☰
-      </button>
-
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#pubs">Publications</a>
-        <a href="#contact" class="btn nav-cta">Contact</a>
-      </nav>
     </div>
 
-    <section class="hero">
-      <div class="hero-main">
-        <p class="hero-kicker">Tech R&amp;D · Context · Culture · Code</p>
-        <h1>Shaping Tomorrow’s Systems — with the Human Element at Their Core.</h1>
-        <p class="hero-sub">
-          CultureQuest Studios explores systems that remember responsibly:
-          context-aware code intelligence, zero-knowledge memory, and
-          culture-aligned digital experiences.
-        </p>
-        <div class="cta">
-          <a class="btn" href="#projects">View Tech Portfolio</a>
-          <a class="btn ghost" href="#pubs">Read White Papers</a>
-        </div>
-        <ul class="hero-tags">
-          <li>Code Understanding</li>
-          <li>Private Memory Systems</li>
-          <li>Cultural Intelligence in Tech</li>
-        </ul>
-      </div>
+    <!-- Desktop nav -->
+    <nav class="nav-links">
+      <a href="javascript:void(0)" onclick="toggleSection('systems')">Systems</a>
+      <a href="javascript:void(0)" onclick="toggleSection('approach')">Approach</a>
+      <a href="javascript:void(0)" onclick="toggleSection('demos')">Demos</a>
+      <a href="javascript:void(0)" onclick="toggleSection('thoughts')">Thoughts</a>
+      <a href="javascript:void(0)" onclick="toggleSection('founder')">Founder</a>
+          
+    </nav>
 
-      <aside class="hero-panel">
-        <div class="hero-panel-header">
-          <span class="dot red"></span>
-          <span class="dot amber"></span>
-          <span class="dot green"></span>
-          <span class="hero-panel-label">Active Concepts</span>
-        </div>
-        <div class="hero-panel-body">
-          <div class="hero-row">
-            <span class="hero-pill">First Look™</span>
-            <span class="hero-status">Prototype &nbsp;·&nbsp; Patent Pending</span>
-          </div>
-          <p>Contextual descriptors that sit on top of code artifacts and help humans “see” systems faster — without touching the source.</p>
+    <!-- Desktop CTA -->
+    <button class="nav-cta" onclick="toggleSection('contact')">
+      <span class="nav-cta-dot"></span>
+      Share a Thought
+    </button>
 
-          <div class="hero-row">
-            <span class="hero-pill">CultureGrid™ / CAL</span>
-            <span class="hero-status">Research &nbsp;·&nbsp; Patent Pending</span>
-          </div>
-          <p>Faith-neutral cultural awareness layer for platforms that need to respect context, diversity, and nuance by design.</p>
-
-          <div class="hero-row">
-            <span class="hero-pill">Detangle™</span>
-            <span class="hero-status">Prototype &nbsp;·&nbsp; Patent Pending</span>
-          </div>
-          <p>Semantic theming over dependency graphs to give engineers an informed starting point instead of raw call chains.</p>
-        </div>
-      </aside>
-    </section>
+    <!-- Mobile hamburger -->
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMobileNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
 
-  <main class="wrapper">
-    <section id="about" class="card">
-      <h2>Technology With Conscience</h2>
-      <p>
-        CultureQuest Studios focuses on systems that make complex software and information ecosystems more humane:
-        privacy-first, context-aware, and culturally aware by default.
-      </p>
-      <div class="about-grid">
-        <div class="about-item">
-          <h3>Context Control</h3>
-          <p>Surfacing the right level of explanation at the right point in the workflow so humans stay in control of insight, not buried in noise.</p>
+  <!-- Mobile nav menu -->
+  <nav class="nav-mobile" id="nav-mobile">
+    <a href="javascript:void(0)" onclick="toggleMobileNav(); toggleSection('systems')">Systems</a>
+    <a href="javascript:void(0)" onclick="toggleMobileNav(); toggleSection('approach')">Approach</a>
+    <a href="javascript:void(0)" onclick="toggleMobileNav(); toggleSection('demos')">Demos</a>
+    <a href="javascript:void(0)" onclick="toggleMobileNav(); toggleSection('thoughts')">Thoughts</a>
+    <a href="javascript:void(0)" onclick="toggleMobileNav(); toggleSection('founder')">Founder</a>
+    <a href="javascript:void(0)" onclick="toggleMobileNav(); toggleSection('contact')">Contact</a>
+  </nav>
+</div>
+
+
+  <main class="page">
+    <!-- Hero -->
+    <section id="top" class="hero">
+      <div>
+        <!-- Hero reflection block -->
+        <div class="hero-reflection">
+          <span class="hero-reflection-label">Curious Reflections</span>
+          <p id="hero-reflection-text" class="hero-reflection-text">
+            “Exploring the missing obvious in how systems remember, relate, and respect context.”
+          </p>
         </div>
-        <div class="about-item">
-          <h3>Cultural Awareness</h3>
-          <p>Designing digital experiences that respect festivals, rituals, identities, and local nuance without bias or overreach.</p>
+
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          A personal innovation Sandbox for the Off-hours curiousities.
         </div>
-        <div class="about-item">
-          <h3>Private Cognition</h3>
-          <p>Memory frameworks that keep personal and organizational thought trails useful without exposing raw data or intent.</p>
+        <h1 class="hero-title">
+          <span class="hero-gradient">Imagining systems that remember responsibly.</span>
+        </h1>
+        <div class="hero-subtitle">
+          Context · Culture · Code. curiosities.
+        </div>
+        <p class="hero-body">
+          CultureQuest Studios is a personal sandbox where the founder parks and nurtures 
+          curiosity about how humans and digital systems meet. It’s a space to explore meaning
+          layers above everyday tools — from <strong>contextual descriptors for files and projects, 
+          to conversation indexes, to culture-aware digital experiences</strong> and more.
+          <br /><br />
+          With the right partners, many of these explorations might slowly
+          mature into <strong>shared primitives</strong> — quietly
+          reshaping how systems remember, reason, and relate to people.
+        </p>
+        <div class="hero-cta-row">
+          <button class="btn-primary" onclick="toggleSection('systems')">
+            Explore Core Systems
+            <span>↘</span>
+          </button>
+          <button class="btn-secondary" onclick="toggleSection('demos')">
+            View Demos &amp; Downloads
+          </button>
+        </div>
+        <div class="hero-meta">
+          <div><strong>18+ years</strong> in enterprise systems & modernization</div>
+          <div>Multiple <strong>patent filings</strong> in active exploration</div>
+          <div>Operated in personal time as an R&amp;D studio</div>
+        </div>
+      </div>
+
+      <!-- Hero slider -->
+      <!-- Hero slider -->
+      <aside class="hero-avatar">
+        <div class="hero-avatar-label">
+          <span>
+            <span class="hero-avatar-dot"></span>
+            Active Musings
+            <span id="hero-slide-counter" class="hero-slide-counter"></span>
+          </span>
+          <small>Overview</small>
+        </div>
+        <div class="hero-avatar-frame" onclick="nextHeroSlide()">
+          <div class="hero-avatar-strip">
+            <!-- Slide 1: First Look -->
+            <div class="hero-avatar-slide">
+              <!-- Optional image:
+              <div class="hero-slide-media">
+                <img src="/assets/hero/firstlook.png" alt="First Look prototype UI" />
+              </div>
+              -->
+              <div class="hero-slide-title">First Look™ – Contextual Descriptors</div>
+              <div class="hero-slide-body">
+                A governed “first look” layer for code and system artifacts —
+                human-readable descriptors and AI insights that travel with
+                components, turning modernization into guided exploration.
+              </div>
+              <div class="hero-slide-meta">
+                <span class="hero-slide-badge-alt">Patent Pending</span>
+                <span class="hero-slide-badge" onclick="scrollToDemos()">See Concept Demo</span>
+              </div>
+            </div>
+
+            <!-- Slide 2: AI Chat Index -->
+            <div class="hero-avatar-slide">
+              <div class="hero-slide-title">AI Chat Index™ – Conversation Graphs. </div>
+              <div class="hero-slide-body">
+                An architectural pattern for bookmarks, branches, and snapshots
+                across conversations — keeping multi-session reasoning coherent
+                and token-aware.
+              </div>
+              <div class="hero-slide-meta">
+                <span class="hero-slide-badge-alt">Patent Pending</span>
+                <span class="hero-slide-badge" onclick="scrollToDemos()">See Concept Demo</span>
+              </div>
+            </div>
+
+            <!-- Slide 3: CultureGrid / CAL -->
+            <div class="hero-avatar-slide">
+              <div class="hero-slide-title">CultureGrid™ / CAL – Cultural Awareness Layer</div>
+              <div class="hero-slide-body">
+                A neutral cultural context layer that aligns events, reminders,
+                and content with lived cultural calendars — not stereotypes.
+              </div>
+              <div class="hero-slide-meta">
+                <span class="hero-slide-badge-alt">Patent Pending</span>
+                
+              </div>
+            </div>
+
+            <!-- Slide 4: Detangle -->
+            <div class="hero-avatar-slide">
+              <div class="hero-slide-title">Detangle™ – Themed Call Graphs</div>
+              <div class="hero-slide-body">
+                A semantic overlay for dependency graphs that lets you see
+                flows by business theme, risk, or capability — turning tangles
+                into stories.
+              </div>
+              <div class="hero-slide-meta">
+                <span class="hero-slide-badge-alt">Patent Pending</span>
+                
+              </div>
+            </div>
+
+            <!-- Slide 5: Park My Thought -->
+            <div class="hero-avatar-slide">
+              <div class="hero-slide-title">Park My Thought™ – Private Cognitive Anchors</div>
+              <div class="hero-slide-body">
+                A zero-knowledge memory paradigm that lets people “park” ideas
+                and recall them via anchors instead of raw text — keeping
+                humans, not tools, at the center of memory.
+              </div>
+              <div class="hero-slide-meta">
+                <span class="hero-slide-badge-alt">Patent Pending</span>
+                
+              </div>
+            </div>
+          </div>
+          <div class="hero-slider-dots" id="hero-slider-dots"></div>
+        </div>
+        <div class="hero-avatar-caption">
+          Each system tackles a different aspect of context, culture, or
+          cognition — but they all point to the same question: how can
+          technology remember in ways that help humans, not overwhelm them?
+        </div>
+        <div class="hero-avatar-chips">
+          <span class="chip">Context layers</span>
+          <span class="chip">Cultural intelligence</span>
+          <span class="chip">Private memory</span>
+          <span class="chip">Legacy &amp; modern stacks</span>
+        </div>
+      </aside>
+
+    </section>
+
+    <!-- Systems / Core IP -->
+    <section id="systems" class="section">
+      <div class="section-eyebrow">Core Systems &amp; IP</div>
+      <h2 class="section-title collapsible-header" onclick="toggleSection('systems')">
+        Technical R&amp;D portfolio <span class="arrow">›</span>
+      </h2>
+      <div class="collapsible-content">
+        <p class="section-intro">
+          A lean view of the systems currently under active exploration. Hover
+          (or tap) to reveal a bit more detail, and use the links to jump to demos or
+          deeper notes where available.
+          <br /><br />
+          With the right platforms and partners, any of these curiosities could
+          evolve from personal prototypes into <strong>category-shaping building
+          blocks</strong> for future tooling.
+        </p>
+
+        <div class="grid">
+          <!-- First Look -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-title">First Look™ – Contextual Descriptors</div>
+                <p class="project-summary">
+                  A governed layer of descriptors that sits beside code, diagrams,
+                  and documents — making large systems explorable in human language.
+                </p>
+              </div>
+              <span class="badge badge-accent">Patent Pending</span>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Code comprehension</span>
+              <span class="tag">Legacy systems</span>
+              <span class="tag">Developer experience</span>
+            </div>
+            <div class="project-extra">
+              Designed for environments where the cost of misunderstanding code
+              is high. First Look treats every artifact as something that
+              deserves a “cover page” humans and AI can both use.
+            </div>
+            <div class="project-actions">
+              <a class="project-btn primary" href="/assets/demos/firstlook-demo.zip" target="_blank" rel="noopener">
+                Download demo
+              </a>
+              <a class="project-btn primary" href="https://youtu.be/49y95K-M-Og" target="_blank" rel="noopener">
+                Watch demo
+              </a>
+              <a class="project-btn" href="/assets/WhitePapers/FirstLook_WhitePaper.pdf" target="_blank" rel="noopener">
+                Whitepaper (PDF)
+              </a>
+            </div>
+          </article>
+
+          <!-- AI Chat Index -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-title">AI Chat Index™ – Conversation Graphs</div>
+                <p class="project-summary">
+                  Non-linear conversation scaffolding: bookmarks, branches,
+                  and state snapshots across multi-session, multi-model chat.
+                </p>
+              </div>
+              <span class="badge">Patent Pending</span>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Conversational AI</span>
+              <span class="tag">Reasoning continuity</span>
+              <span class="tag">Token-aware flows</span>
+            </div>
+            <div class="project-extra">
+              Treats conversations like maps, not timelines. The index helps
+              humans and systems revisit paths, detours, and decisions without
+              losing context to scrollback.
+            </div>
+            <div class="project-actions">
+              <a class="project-btn primary" href="https://ai-chat-index-demo.vercel.app/" target="_blank" rel="noopener">
+                Try demo
+              </a>
+              <a class="project-btn" href="https://www.youtube.com/watch?v=AI_CHAT_INDEX_DEMO" target="_blank" rel="noopener">
+                Watch demo
+              </a>
+              <span class="project-btn disabled">Whitepaper in progress</span>
+            </div>
+          </article>
+
+          <!-- CultureGrid / CAL -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-title">CultureGrid™ / CAL – Cultural Awareness Layer</div>
+                <p class="project-summary">
+                  A neutral cultural backbone for platforms that need to respect
+                  festivals, rituals, and local rhythms without stereotyping.
+                </p>
+              </div>
+              <span class="badge">Patent Pending</span>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Culture tech</span>
+              <span class="tag">Calendars</span>
+              <span class="tag">Inclusive design</span>
+            </div>
+            <div class="project-extra">
+              Think of it as a cultural “underlay” that other systems can query
+              — a way to align experiences with cultural context while keeping
+              identity and belief personal.
+            </div>
+            <div class="project-actions">
+              <span class="project-btn disabled">Download demo (TBD)</span>
+              <span class="project-btn disabled">Watch demo (TBD)</span>
+              <span class="project-btn disabled">Whitepaper coming soon</span>
+            </div>
+          </article>
+
+          <!-- Detangle -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-title">Detangle™ – Themed Call Graphs</div>
+                <p class="project-summary">
+                  A semantic overlay on dependency graphs that highlights flows
+                  by business theme, risk, or capability.
+                </p>
+              </div>
+              <span class="badge">Patent Pending</span>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Architecture</span>
+              <span class="tag">Visualization</span>
+              <span class="tag">Cognitive clarity</span>
+            </div>
+            <div class="project-extra">
+              Instead of staring at a hairball, Detangle lets you toggle views:
+              “show me everything touching payments”, “show me outage paths”,
+              “show me regulatory surfaces”.
+            </div>
+            <div class="project-actions">
+              <span class="project-btn disabled">Download demo (TBD)</span>
+              <span class="project-btn disabled">Watch demo (TBD)</span>
+              <span class="project-btn disabled">Concept diagrams in progress</span>
+            </div>
+          </article>
+
+          <!-- Park My Thought -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-title">Park My Thought™ – Cognitive Anchors</div>
+                <p class="project-summary">
+                  A way to store and retrieve ideas using anchors instead of raw
+                  text — keeping humans in the loop of their own memory.
+                </p>
+              </div>
+              <span class="badge">Patent Pending</span>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Personal knowledge</span>
+              <span class="tag">Zero-knowledge patterns</span>
+              <span class="tag">Thought workflows</span>
+            </div>
+            <div class="project-extra">
+              Rather than pouring every thought into tools, Park My Thought
+              treats tools as indexers of your anchors — so your actual stories
+              can stay in your head, journal, or trusted circles.
+            </div>
+            <div class="project-actions">
+              <span class="project-btn disabled">Download demo (TBD)</span>
+              <span class="project-btn disabled">Watch demo (TBD)</span>
+              <span class="project-btn disabled">Framework notes in progress</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="projects">
-      <div class="section-heading">
-        <h2>Tech Projects &amp; IP</h2>
-        <p>Selected patent-backed initiatives exploring the next layer above today’s tools and platforms.</p>
-      </div>
+    <!-- Approach / Technology -->
+    <section id="approach" class="section">
+      <div class="section-eyebrow">Approach</div>
+      <h2 class="section-title collapsible-header" onclick="toggleSection('approach')">
+        How the studio thinks about systems <span class="arrow">›</span>
+      </h2>
+      <div class="collapsible-content">
+        <p class="section-intro">
+          CultureQuest Studios sits between mainframes, modern stacks, culture,
+          and cognition. It’s not a product company or consultancy (yet) — it’s
+          an R&amp;D space where patterns are allowed to breathe, cross-pollinate,
+          and occasionally contradict each other.
+        </p>
 
-      <div class="grid">
-        <article class="card">
-          <div class="card-header">
-            <h3>First Look™</h3>
-            <span class="badge">Patent Pending</span>
-          </div>
-          <p>Contextual descriptors and insights that sit alongside code artifacts, making large systems explorable in human language.</p>
-          <ul class="meta-list">
-            <li>Focus: Code exploration &amp; modernization</li>
-            <li>Form: VS Code prototype + web UI concepts</li>
-          </ul>
-          <p class="card-links">
-            <a href="/assets/WhitePapers/FirstLook_WhitePaper.pdf" class="link" target="_blank" rel="noopener">White Paper (PDF)</a>
-            <!-- <span>·</span>
-            <a href="#" class="link">Request Private Demo</a> -->
-          </p>
-        </article>
+        <div class="grid">
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-title">Modernization, with context first</div>
+                <div class="card-body">
+                  Nearly two decades of mainframe work taught me that most
+                  modernization fails at context, not code. The studio explores
+                  ways to preserve and surface institutional memory alongside
+                  technological change.
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Mainframes</span>
+              <span class="tag">Legacy uplift</span>
+              <span class="tag">Knowledge retention</span>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="card-header">
-            <h3>Park My Thought™</h3>
-            <span class="badge">Patent Pending</span>
-          </div>
-          <p>Zero-knowledge memory framework that lets users “park” thoughts and recall them later without exposing their raw narrative.</p>
-          <ul class="meta-list">
-            <li>Focus: Personal cognition &amp; digital memory</li>
-            <li>Status: Concept &amp; system design</li>
-          </ul>
-          <p class="card-links">
-            <span class="coming-soon">White Paper coming soon</span>
-          </p>
-        </article>
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-title">AI as a continuity layer</div>
+                <p class="card-body">
+                  AI is treated less as magic and more as connective tissue —
+                  helping systems remember what they saw, why they changed,
+                  and how people reasoned about them over time.
+                  <br /><br />
+                  At scale, this kind of continuity layer could quietly reset the
+                  expectations we have for every modern software stack.
+                </p>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Agentic AI</span>
+              <span class="tag">Context scaffolding</span>
+              <span class="tag">Human-in-the-loop</span>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="card-header">
-            <h3>CultureGrid™ / CAL</h3>
-            <span class="badge">Patent Pending</span>
-          </div>
-          <p>Faith-neutral cultural awareness layer that helps platforms align reminders, feeds, and experiences with lived cultural calendars.</p>
-          <ul class="meta-list">
-            <li>Focus: Cultural intelligence in digital systems</li>
-            <li>Status: Provisional patent filed</li>
-          </ul>
-          <p class="card-links">
-            <span class="coming-soon">White Paper in progress</span>
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-header">
-            <h3>Detangle™</h3>
-            <span class="badge">Patent Pending</span>
-          </div>
-          <p>Context-aware call graph overlay with semantic theming to reveal meaningful “stories” across dependencies, not just edges.</p>
-          <ul class="meta-list">
-            <li>Focus: System comprehension &amp; theming</li>
-            <li>Status: Provisional patent filed</li>
-          </ul>
-          <p class="card-links">
-            <span class="coming-soon">White Paper in progress</span>
-          </p>
-        </article>
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-title">Culture as infrastructure</div>
+                <div class="card-body">
+                  Culture is treated as infrastructure, not decoration. The
+                  studio works on layers that let digital systems adapt to
+                  cultural rhythms without turning identity into a checkbox.
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Culture-aware design</span>
+              <span class="tag">Ethical platforms</span>
+              <span class="tag">Global ecosystems</span>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="pubs" class="card">
-      <h2>Publications</h2>
-      <p>Formal write-ups and public artifacts around the core ideas.</p>
-      <ul class="links">
-        <li>
-          <a href="/assets/WhitePapers/FirstLook_WhitePaper.pdf" class="link" target="_blank" rel="noopener">
-            White Paper — First Look™: Contextual Descriptors as the Missing Layer in Code Exploration
+    <!-- Demos & Downloads (common bucket) -->
+    <section id="demos" class="section">
+      <div class="section-eyebrow">Demos &amp; Downloads</div>
+      <h2 class="section-title collapsible-header" onclick="toggleSection('demos')">
+        Hands-on exploration <span class="arrow">›</span>
+      </h2>
+      <div class="collapsible-content">
+        <p class="section-intro">
+          A single place to grab demos, watch walkthroughs, and open whitepapers
+          for systems that are ready for external eyes.
+        </p>
+
+        <div class="demo-grid">
+          <!-- First Look -->
+          <article class="card demo-card">
+            <div class="demo-card-header">
+              <h3 class="demo-card-title">First Look™</h3>
+              <p class="demo-card-sub">Contextual Descriptors</p>
+            </div>
+            <p class="demo-card-meta">
+              VS Code / explorer-style prototype for descriptor-driven code exploration.
+              Focused on large, complex systems where “reading everything” is not an option.
+            </p>
+            <div class="demo-card-footer">
+              <div class="demo-pill">Prototype · Patent Pending</div>
+              <div class="demo-actions">
+                          <!-- Email -->
+                  <a
+                    class="btn-primary"
+                    href="mailto:founder@culturequeststudios.com"
+                    style="text-align:center;"
+                  >
+                    REQUEST DEMO
+                  </a>
+                  <a class="btn-primary"
+                    href="https://youtu.be/49y95K-M-Og"
+                    target="_blank"
+                    rel="noopener"
+                    onclick="logDemoClick('firstlook_watch_demo')">
+                    Watch demo
+                  </a>
+                <a class="project-btn" href="/assets/WhitePapers/FirstLook_WhitePaper.pdf" target="_blank" rel="noopener">
+                  Whitepaper
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AI Chat Index -->
+          <article class="card demo-card">
+            <div class="demo-card-header">
+              <h3 class="demo-card-title">AI Chat Index™</h3>
+              <p class="demo-card-sub">Conversation Graphs</p>
+            </div>
+            <p class="demo-card-meta">
+              Web-based prototype for bookmarks, detours, and snapshots across multi-session,
+              multi-model chat — treating conversations more like maps than timelines.
+            </p>
+            <div class="demo-card-footer">
+              <div class="demo-pill">Prototype · Patent Pending</div>
+              <div class="demo-actions">
+              <a class="btn-primary"
+                href="https://ai-chat-index-demo.vercel.app/"
+                target="_blank"
+                rel="noopener"
+                onclick="logDemoClick('ai_chat_index_try_demo')">
+                Try Demo
+              </a>
+
+
+              <a class="btn-primary"
+                href="https://www.youtube.com/watch?v=AI_CHAT_INDEX_DEMO"
+                target="_blank"
+                rel="noopener"
+                onclick="logDemoClick('ai_chat_index_watch_demo')">
+                Watch demo
+              </a>
+
+                <span class="project-btn disabled">Concept note in progress</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Future demos bucket -->
+          <article class="card demo-card">
+            <div class="demo-card-header">
+              <h3 class="demo-card-title">Upcoming systems</h3>
+              <p class="demo-card-sub">CultureGrid™ · Detangle™ · Park My Thought™</p>
+            </div>
+            <p class="demo-card-meta">
+              As these reach stable prototype form, they’ll join this gallery with links to
+              downloads, walkthrough videos, and technical notes.
+            </p>
+            <div class="demo-card-footer">
+              <div class="demo-pill demo-pill-muted">Demos &amp; videos coming soon</div>
+              <div class="demo-actions">
+                <span class="project-btn disabled">Download demo (TBD)</span>
+                <span class="project-btn disabled">Watch demo (TBD)</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thoughts / Writing -->
+    <section id="thoughts" class="section">
+      <div class="section-eyebrow">Thoughts &amp; Notes</div>
+      <h2 class="section-title collapsible-header" onclick="toggleSection('thoughts')">
+        Essays, drafts, and idea fragments <span class="arrow">›</span>
+      </h2>
+      <div class="collapsible-content">
+        <p class="section-intro">
+          Not every idea becomes a product. Some function better as essays,
+          drafts, or quiet provocations. This space collects the writing that
+          sits behind the systems — the “why” and “what if”.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <div class="card-header-row">
+              <div class="card-title">Systems That Remember Responsibly</div>
+              <span class="badge">Essay</span>
+            </div>
+            <div class="card-body">
+              Why “remember everything” isn’t a healthy design goal — and how
+              context, consent, and culture can inform a more grounded approach
+              to digital memory.
+            </div>
+            <a href="#" class="card-footer-link">
+              Read Draft (Soon)
+              <svg viewBox="0 0 24 24">
+                <path fill="currentColor" d="M7 17l6-6-6-6 2-2 10 10-10 10z" />
+              </svg>
+            </a>
+          </article>
+
+          <article class="card">
+            <div class="card-header-row">
+              <div class="card-title">Exploring the Missing Obvious</div>
+              <span class="badge">Field Notes</span>
+            </div>
+            <div class="card-body">
+              Quick notes from moments where a small framing shift unlocked an
+              obvious-but-hidden path — in code, systems, or conversations.
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header-row">
+              <div class="card-title">Culture as a Hidden Infrastructure Layer</div>
+              <span class="badge">Reflection</span>
+            </div>
+            <div class="card-body">
+              Thoughts on why cultural rhythms rarely show up explicitly in
+              architecture diagrams, and what it would mean if they did.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet the Founder -->
+    <section id="founder" class="section">
+      <div class="section-eyebrow">Founder</div>
+      <h2 class="section-title collapsible-header" onclick="toggleSection('founder')">
+        Meet the person behind CultureQuest Studios <span class="arrow">›</span>
+      </h2>
+      <div class="collapsible-content">
+        <p class="section-intro">
+          CultureQuest Studios is a personal R&amp;D space created and run by
+          <strong>Manish Bhat</strong> — a technologist, systems thinker, and
+          inventor who has spent nearly two decades shaping and simplifying
+          enterprise-scale software.
+        </p>
+
+        <div class="card">
+          <div class="founder-profile">
+            
+            <div class="founder-avatar"
+                style="
+                    background-image: url('assets/icons/founder_image.jpeg');
+                    background-size: cover;
+                    background-position: center;
+                ">
+            </div>
+
+
+            <div class="founder-info">
+            <h3>Manish Bhat</h3>
+            <p class="founder-role">Technologist · Inventor · Systems Thinker</p>
+
+            <p class="card-body" style="margin-bottom:10px;">
+              Manish has spent more than 18 years working across enterprise-scale software,
+              resilience-critical systems, and multi-technology environments. That experience
+              shaped his instincts — but his curiosity has always extended well beyond the
+              boundaries of any formal role.
+              <br /><br />
+
+              CultureQuest Studios is a personal space where he explores ideas that don’t
+              normally fit inside day-to-day engineering: context-aware understanding,
+              cultural intelligence in digital systems, and new patterns for how humans and
+              machines reason together. These explorations are not products or services as yet —
+              just honest attempts to understand “what might exist above today’s tools.”
+              <br /><br />
+
+              He approaches this work with humility and a long-term mindset, and is open to
+              thoughtful collaboration with teams who see these explorations as
+              <strong>early primitives</strong> — quiet foundations that, with the right
+              partners, could help shape the next generation of digital experiences.
+            </p>
+
+              <div class="founder-links">
+                <a
+                  class="btn-primary"
+                  href="https://www.linkedin.com/in/manish-bhat-tech-agile"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  LinkedIn Profile
+                </a>
+                <a class="btn-secondary disabled-link">
+                  Website
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="section-eyebrow">Contact</div>
+      <h2 class="section-title collapsible-header" onclick="toggleSection('contact')">
+        Collaborations, pilots, and curious conversations <span class="arrow">›</span>
+      </h2>
+      <div class="collapsible-content">
+        <p class="section-intro">
+          If you’re exploring contextual tooling, culture-aware platforms,
+          conversational AI continuity, or zero-knowledge memory patterns —
+          CultureQuest Studios is open to thoughtful conversations, pilots,
+          and long-term partnerships.
+          <br /><br />
+          Many of these curiosities have potential far beyond prototypes; the right
+          collaboration could turn them into <strong>infrastructure-level shifts</strong>
+          in how systems understand and support people.
+        </p>
+
+        <div class="contact-card">
+        <h3>Get in touch</h3>
+        <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">
+          You can reach out directly using the options below and lets start a thoughtful conversation.
+          Who knows we may end up building the future together!
+        </p>
+
+        <div style="display:flex; flex-direction:column; gap:12px;">
+
+          <!-- Email -->
+          <a
+            class="btn-primary"
+            href="mailto:founder@culturequeststudios.com"
+            style="text-align:center;"
+          >
+            Email the Founder (founder@culturequeststudios.com)
           </a>
-        </li>
-        <li>
-          <span class="coming-soon">Detangle™ · White Paper planned</span>
-        </li>
-        <li>
-          <span class="coming-soon">CultureGrid™ / CAL · White Paper planned</span>
-        </li>
-        <li>
-          <a href="#" target="_blank" rel="noopener">LinkedIn posts &amp; thought pieces (soon)</a>
-        </li>
-      </ul>
-      <p class="legal">© 2025 CultureQuest Studios LLC · All rights reserved. · Independent tech R&amp;D</p>
+
+          <!-- LinkedIn -->
+          <a
+            class="btn-secondary"
+            href="https://www.linkedin.com/in/culturequest-studios-566a9538b"
+            target="_blank"
+            rel="noopener"
+            style="text-align:center;"
+          >
+            Connect on LinkedIn
+          </a>
+
+        </div>
+</div>
+
+
+          
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <p>For collaborations, research conversations, or potential partnerships around these systems:</p>
-      <p>
-        <a href="mailto:founder@culturequeststudios.com">founder@culturequeststudios.com</a>
-      </p>
-      <p>
-        <a href="https://www.linkedin.com/in/culturequest-studios-566a9538b" target="_blank" rel="noopener">LinkedIn</a> ·
-        <a href="#" target="_blank" rel="noopener">YouTube (tech demos)</a> ·
-        <a href="#" target="_blank" rel="noopener">GitHub</a>
-      </p>
-    </section>
+    <!-- Footer -->
+    <footer>
+      <div>
+        © <span id="year"></span> CultureQuest Studios. All rights reserved.
+        <br />
+        <span style="font-size:10px;">
+          CultureQuest Studios operates as a personal innovation lab by Manish
+          Bhat. Work presented here is created in personal time and does not
+          represent the views or systems of his employer.
+        </span>
+      </div>
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        <a href="javascript:void(0)" onclick="toggleSection('systems')">Systems</a>
+        <a href="javascript:void(0)" onclick="toggleSection('demos')">Demos</a>
+        <a href="javascript:void(0)" onclick="toggleSection('founder')">Founder</a>
+        <a href="javascript:void(0)" onclick="toggleSection('contact')">Contact</a>
+      </div>
+    </footer>
   </main>
 
-  <script src="script.js"></script>
+  <!-- JS: footer year -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- JS: accordion sections -->
+  <script>
+    function toggleSection(id) {
+      const sections = document.querySelectorAll("section.section");
+      sections.forEach((sec) => {
+        if (sec.id !== id && sec.classList.contains("open")) {
+          sec.classList.remove("open");
+          const c = sec.querySelector(".collapsible-content");
+          if (c) c.style.maxHeight = null;
+        }
+      });
+
+      const current = document.getElementById(id);
+      if (!current) return;
+      const content = current.querySelector(".collapsible-content");
+      if (!content) return;
+
+      if (current.classList.contains("open")) {
+        current.classList.remove("open");
+        content.style.maxHeight = null;
+      } else {
+        current.classList.add("open");
+        content.style.maxHeight = content.scrollHeight + "px";
+        current.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  </script>
+
+  <!-- JS: rotating reflections -->
+  <script>
+    const heroReflections = [
+      "“Exploring the missing obvious in how systems remember, relate, and respect context.”",
+      "“AI can bring its own game - but the rules should be ours.”",
+      "“Designing systems that remember responsibly, not obsessively.”",
+      "“Context, culture, and code deserve to sit at the same table.”",
+      "“Legacy systems are just future insight waiting for better questions.”",
+      "“Culture is the missing context layer in most digital platforms.”",
+    ];
+
+    let heroReflectionIndex = 0;
+    const heroReflectionEl = document.getElementById("hero-reflection-text");
+
+    function rotateHeroReflection() {
+      if (!heroReflectionEl) return;
+      heroReflectionIndex = (heroReflectionIndex + 1) % heroReflections.length;
+      heroReflectionEl.textContent = heroReflections[heroReflectionIndex];
+    }
+
+    setInterval(rotateHeroReflection, 12000);
+  </script>
+
+  <!-- JS: hero slider auto-rotation -->
+  <!-- JS: hero slider (auto + counter + demo link) -->
+  
+<script>
+  const AVATAR_ROTATION_MS = 7000;
+
+  let currentHeroIndex = 0;
+  let heroSlides;
+  let heroStrip;
+  let heroInterval;
+  let heroCounterEl;
+  let heroDotsContainer;
+
+  document.addEventListener("DOMContentLoaded", function () {
+    heroStrip = document.querySelector(".hero-avatar-strip");
+    if (!heroStrip) return;
+
+    heroSlides = heroStrip.querySelectorAll(".hero-avatar-slide");
+    if (!heroSlides.length) return;
+
+    heroCounterEl = document.getElementById("hero-slide-counter");
+    heroDotsContainer = document.getElementById("hero-slider-dots");
+
+    const heroFrame = document.querySelector(".hero-avatar-frame");
+    if (heroFrame) {
+      heroFrame.style.cursor = "pointer";
+
+      const isTouch =
+        "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+      if (isTouch) {
+        setupTouchControls(heroFrame);
+      } else {
+        // Desktop: click to advance + hover pause
+        heroFrame.addEventListener("click", nextHeroSlide);
+        heroFrame.addEventListener("mouseenter", pauseHeroSlider);
+        heroFrame.addEventListener("mouseleave", resumeHeroSlider);
+      }
+    }
+
+    // build dots dynamically
+    buildHeroDots();
+
+    // Initial state
+    showHeroSlide(currentHeroIndex);
+
+    // Autoplay
+    heroInterval = setInterval(nextHeroSlide, AVATAR_ROTATION_MS);
+  });
+
+  function buildHeroDots() {
+    if (!heroDotsContainer || !heroSlides) return;
+    heroDotsContainer.innerHTML = "";
+
+    heroSlides.forEach((_, idx) => {
+      const dot = document.createElement("span");
+      dot.className = "hero-slider-dot";
+      dot.addEventListener("click", function (event) {
+        event.stopPropagation(); // don't trigger frame click
+        currentHeroIndex = idx;
+        showHeroSlide(currentHeroIndex);
+      });
+      heroDotsContainer.appendChild(dot);
+    });
+  }
+
+  function updateHeroDots() {
+    if (!heroDotsContainer || !heroSlides) return;
+    const dots = heroDotsContainer.querySelectorAll(".hero-slider-dot");
+    dots.forEach((dot, idx) => {
+      if (idx === currentHeroIndex) {
+        dot.classList.add("active");
+      } else {
+        dot.classList.remove("active");
+      }
+    });
+  }
+
+  function showHeroSlide(index) {
+    if (!heroStrip || !heroSlides) return;
+    heroStrip.style.transform = `translateX(-${index * 100}%)`;
+
+    if (heroCounterEl) {
+      const total = heroSlides.length;
+      heroCounterEl.textContent = `<${index + 1} of ${total}>`;
+    }
+
+    updateHeroDots();
+  }
+
+  function nextHeroSlide() {
+    if (!heroSlides) return;
+    currentHeroIndex = (currentHeroIndex + 1) % heroSlides.length;
+    showHeroSlide(currentHeroIndex);
+  }
+
+  function prevHeroSlide() {
+    if (!heroSlides) return;
+    currentHeroIndex =
+      (currentHeroIndex - 1 + heroSlides.length) % heroSlides.length;
+    showHeroSlide(currentHeroIndex);
+  }
+
+  function pauseHeroSlider() {
+    if (heroInterval) {
+      clearInterval(heroInterval);
+      heroInterval = null;
+    }
+  }
+
+  function resumeHeroSlider() {
+    if (!heroInterval) {
+      heroInterval = setInterval(nextHeroSlide, AVATAR_ROTATION_MS);
+    }
+  }
+
+  function setupTouchControls(heroFrame) {
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const SWIPE_THRESHOLD = 40;
+
+    heroFrame.addEventListener(
+      "touchstart",
+      function (e) {
+        if (!e.touches || !e.touches.length) return;
+        touchStartX = e.touches[0].clientX;
+        pauseHeroSlider();
+      },
+      { passive: true }
+    );
+
+    heroFrame.addEventListener(
+      "touchmove",
+      function (e) {
+        if (!e.touches || !e.touches.length) return;
+        touchEndX = e.touches[0].clientX;
+      },
+      { passive: true }
+    );
+
+    heroFrame.addEventListener(
+      "touchend",
+      function () {
+        const dx = touchEndX - touchStartX;
+
+        if (Math.abs(dx) > SWIPE_THRESHOLD) {
+          // swipe
+          if (dx > 0) {
+            prevHeroSlide();
+          } else {
+            nextHeroSlide();
+          }
+        } else {
+          // tap
+          nextHeroSlide();
+        }
+
+        resumeHeroSlider();
+      },
+      { passive: true }
+    );
+
+    heroFrame.addEventListener(
+      "touchcancel",
+      function () {
+        resumeHeroSlider();
+      },
+      { passive: true }
+    );
+  }
+
+  // Scroll to demos AND expand the section
+  function scrollToDemos() {
+    const demos = document.getElementById("demos");
+    if (!demos) return;
+
+    if (typeof toggleSection === "function") {
+      toggleSection("demos");
+    }
+
+    setTimeout(() => {
+      demos.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 150);
+  }
+
+  function logDemoClick(eventName) {
+    // simple serverless GET request for logging
+    const img = new Image();
+    img.src = `https://culturequeststudios.com/log?e=${eventName}&t=${Date.now()}`;
+    console.log("Logged:", eventName);
+  }
+</script>
+
+
+
+
+
 </body>
 </html>
