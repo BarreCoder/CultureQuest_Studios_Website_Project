@@ -1109,3 +1109,48 @@ footer {
   text-transform: none !important;
   font-size: 10px;
 }
+/* ------------------------------------------
+   MOBILE NAV — FIX HAMBURGER VISIBILITY + ANIMATION
+------------------------------------------- */
+
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px; /* more visible */
+  border-radius: 2px;
+  background-color: #ffffff; /* force visible white */
+  transition: all 0.3s ease;
+}
+
+/* ON OPEN — Transform to “X” */
+.nav-shell.nav-open .nav-toggle span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.nav-shell.nav-open .nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-shell.nav-open .nav-toggle span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Keep spacing consistent */
+@media (max-width: 768px) {
+  .nav-toggle {
+    margin-left: auto;
+  }
+}

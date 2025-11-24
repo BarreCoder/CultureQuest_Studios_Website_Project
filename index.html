@@ -18,7 +18,7 @@
   />
 
   <!-- External CSS -->
-  <link rel="stylesheet" href="style.css?v=20251123" />
+  <link rel="stylesheet" href="style.css?v=2" />
 </head>
 <body>
   <!-- Sticky nav -->
@@ -1027,6 +1027,23 @@
     img.src = `https://culturequeststudios.com/log?e=${eventName}&t=${Date.now()}`;
     console.log("Logged:", eventName);
   }
+
+
+  function toggleMobileNav() {
+    const shell = document.querySelector(".nav-shell");
+    if (!shell) return;
+
+    // Toggle the nav-open class on the shell
+    shell.classList.toggle("nav-open");
+
+    // (Optional) improve accessibility
+    const toggleBtn = document.querySelector(".nav-toggle");
+    if (toggleBtn) {
+      const isOpen = shell.classList.contains("nav-open");
+      toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    }
+  }
+
 </script>
 
 
