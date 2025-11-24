@@ -1047,6 +1047,52 @@
 </script>
 
 
+<!-- JS: accordion sections -->
+<script>
+  function toggleSection(id) {
+    const sections = document.querySelectorAll("section.section");
+    sections.forEach((sec) => {
+      if (sec.id !== id && sec.classList.contains("open")) {
+        sec.classList.remove("open");
+        const c = sec.querySelector(".collapsible-content");
+        if (c) c.style.maxHeight = null;
+      }
+    });
+
+    const current = document.getElementById(id);
+    if (!current) return;
+    const content = current.querySelector(".collapsible-content");
+    if (!content) return;
+
+    if (current.classList.contains("open")) {
+      current.classList.remove("open");
+      content.style.maxHeight = null;
+    } else {
+      current.classList.add("open");
+      content.style.maxHeight = content.scrollHeight + "px";
+      current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+</script>
+
+<!-- JS: auto-open sections based on URL hash -->
+<script>
+  function openSectionFromHash() {
+    const hash = window.location.hash;
+    if (!hash) return;
+
+    const sectionId = hash.substring(1);
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+
+    if (section.classList.contains("section")) {
+      toggleSection(sectionId);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", openSectionFromHash);
+  window.addEventListener("hashchange", openSectionFromHash);
+</script>
 
 
 

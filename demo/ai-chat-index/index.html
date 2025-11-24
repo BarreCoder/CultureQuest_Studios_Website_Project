@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Chat Index – Redirect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script>
+    // same pattern used everywhere else on your site
+    function logDemoClick(eventName) {
+      const img = new Image();
+      img.src = `https://culturequeststudios.com/log?e=${eventName}&t=${Date.now()}`;
+      console.log("Logged:", eventName);
+    }
+
+    // fire logging immediately on page load
+    document.addEventListener("DOMContentLoaded", function () {
+      logDemoClick("ai_chat_index_redirect");
+
+      // tiny delay to ensure GET fires before redirect
+      setTimeout(() => {
+        window.location.href = "https://ai-chat-index-demo.vercel.app/";
+      }, 80);
+    });
+  </script>
+
+  <!-- As a fallback, meta redirect -->
+  <meta http-equiv="refresh" content="0; URL='https://ai-chat-index-demo.vercel.app/'" />
+
+  <style>
+    body {
+      background: #0f172a;
+      color: #e2e8f0;
+      font-family: Inter, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  Redirecting to <strong>AI Chat Index Demo</strong>…
+  <br /><br />
+  <a href="https://ai-chat-index-demo.vercel.app/">Click here</a> if not redirected.
+</body>
+</html>
