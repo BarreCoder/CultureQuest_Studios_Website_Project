@@ -1154,3 +1154,39 @@ footer {
     margin-left: auto;
   }
 }
+.pub-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pub-list a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--link-color, #38bdf8);
+}
+
+.pub-list a:hover {
+  text-decoration: underline;
+}
+.pub-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pub-list a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--link-color, #38bdf8);
+}
+
+.pub-list a:hover {
+  text-decoration: underline;
+}

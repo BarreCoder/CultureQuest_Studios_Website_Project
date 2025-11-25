@@ -18,7 +18,7 @@
   />
 
   <!-- External CSS -->
-  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
   <!-- Sticky nav -->
@@ -37,7 +37,7 @@
       <a href="javascript:void(0)" onclick="toggleSection('systems')">Systems</a>
       <a href="javascript:void(0)" onclick="toggleSection('approach')">Approach</a>
       <a href="javascript:void(0)" onclick="toggleSection('demos')">Demos</a>
-      <a href="javascript:void(0)" onclick="toggleSection('thoughts')">Thoughts</a>
+      <a href="javascript:void(0)" onclick="toggleSection('publications')">Publications</a>
       <a href="javascript:void(0)" onclick="toggleSection('founder')">Founder</a>
           
     </nav>
@@ -61,7 +61,7 @@
     <a href="javascript:void(0)" onclick="toggleMobileNav(); toggleSection('systems')">Systems</a>
     <a href="javascript:void(0)" onclick="toggleMobileNav(); toggleSection('approach')">Approach</a>
     <a href="javascript:void(0)" onclick="toggleMobileNav(); toggleSection('demos')">Demos</a>
-    <a href="javascript:void(0)" onclick="toggleMobileNav(); toggleSection('thoughts')">Thoughts</a>
+    <a href="javascript:void(0)" onclick="toggleMobileNav(); toggleSection('publications')">Publications</a>
     <a href="javascript:void(0)" onclick="toggleMobileNav(); toggleSection('founder')">Founder</a>
     <a href="javascript:void(0)" onclick="toggleMobileNav(); toggleSection('contact')">Contact</a>
   </nav>
@@ -577,62 +577,70 @@
       </div>
     </section>
 
-    <!-- Thoughts / Writing -->
-    <section id="thoughts" class="section">
-      <div class="section-eyebrow">Thoughts &amp; Notes</div>
-      <h2 class="section-title collapsible-header" onclick="toggleSection('thoughts')">
-        Essays, drafts, and idea fragments <span class="arrow">›</span>
-      </h2>
-      <div class="collapsible-content">
-        <p class="section-intro">
-          Not every idea becomes a product. Some function better as essays,
-          drafts, or quiet provocations. This space collects the writing that
-          sits behind the systems — the “why” and “what if”.
-        </p>
+    <!-- Publications / White Papers -->
+<section id="publications" class="section">
+  <div class="section-eyebrow">Publications</div>
+  <h2 class="section-title collapsible-header" onclick="toggleSection('publications')">
+    Publications &amp; White Papers <span class="arrow">›</span>
+  </h2>
+  <div class="collapsible-content">
+    <p class="section-intro">
+      Selected white papers and publications that sit behind the systems — the
+      deeper “why” and “how” for anyone who prefers long-form thinking.
+     </p>
 
-        <div class="grid">
-          <article class="card">
-            <div class="card-header-row">
-              <div class="card-title">Systems That Remember Responsibly</div>
-              <span class="badge">Essay</span>
-            </div>
-            <div class="card-body">
-              Why “remember everything” isn’t a healthy design goal — and how
-              context, consent, and culture can inform a more grounded approach
-              to digital memory.
-            </div>
-            <a href="#" class="card-footer-link">
-              Read Draft (Soon)
-              <svg viewBox="0 0 24 24">
-                <path fill="currentColor" d="M7 17l6-6-6-6 2-2 10 10-10 10z" />
-              </svg>
-            </a>
-          </article>
+    <ul class="pub-list">
+      <!-- First Look whitepaper -->
+      <li>
+        <a
+          href="/assets/WhitePapers/FirstLook_WhitePaper.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          First Look™ – Contextual Descriptors (Whitepaper, PDF)
+        </a>
+      </li>
 
-          <article class="card">
-            <div class="card-header-row">
-              <div class="card-title">Exploring the Missing Obvious</div>
-              <span class="badge">Field Notes</span>
-            </div>
-            <div class="card-body">
-              Quick notes from moments where a small framing shift unlocked an
-              obvious-but-hidden path — in code, systems, or conversations.
-            </div>
-          </article>
+            <!-- Culturarl Awareness Layer whitepaper -->
+      <li>
+        <a
+          href="/assets/WhitePapers/CAL_Cultural_Awareness_Layer_Whitepaper.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          CAL™ – Cultural Awareness Layer (Whitepaper, PDF)
+        </a>
+      </li>
 
-          <article class="card">
-            <div class="card-header-row">
-              <div class="card-title">Culture as a Hidden Infrastructure Layer</div>
-              <span class="badge">Reflection</span>
-            </div>
-            <div class="card-body">
-              Thoughts on why cultural rhythms rarely show up explicitly in
-              architecture diagrams, and what it would mean if they did.
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+
+                  <!-- AI Chat Index whitepaper -->
+      <li>
+        <a
+          href="/assets/WhitePapers/AI_Chat_Index_Whitepaper.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          AI Chat Index™ – AI Conversational Context Preservation & Checkpointing (Whitepaper, PDF)
+        </a>
+      </li>
+
+      <!-- Add more as you create them -->
+      <!-- Example placeholder for CAL / CultureGrid -->
+      <!--
+      <li>
+        <a
+          href="/assets/WhitePapers/CAL_WhitePaper_v1.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          CultureGrid™ / CAL – Cultural Awareness Layer (Concept Paper, PDF)
+        </a>
+      </li>
+      -->
+    </ul>
+  </div>
+</section>
+    
 
     <!-- Meet the Founder -->
     <section id="founder" class="section">
