@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E34BLEG9GK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-E34BLEG9GK');
+  </script>
+
   <meta charset="UTF-8" />
   <title>CultureQuest Studios – Systems That Remember Responsibly</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -429,20 +439,31 @@
           </div>
 
           <div class="project-actions">
-            <a
-              class="project-btn primary"
-              href="/assets/downloads/firstlook-vscode-extension-0.1.0.vsix"
-              target="_blank"
-              rel="noopener"
-            >
-              Download Extension
-            </a>
+          <a
+            class="project-btn primary"
+            href="/assets/downloads/firstlook-vscode-extension-0.1.0.vsix"
+            target="_blank"
+            rel="noopener"
+            title="Install via Extensions → ... → Install from VSIX. Select the downloaded .vsix. Then right-click any file → Add Meaning"
+            onclick="gtag('event', 'vsix_download', {
+              event_category: 'firstlook',
+              event_label: 'v0.1.0_download',
+              value: 1
+            })"
+          >
+            Download Extension <span style="font-size:12px;opacity:0.7;">(?)</span>
+          </a>
 
             <a
               class="project-btn primary"
               href="https://youtu.be/Dg92g7_sG3M"
               target="_blank"
               rel="noopener"
+              onclick="gtag('event', 'firstlook_watch_demo', {
+                event_category: 'firstlook',
+                event_label: 'demo_watch',
+                value: 1
+            })"
             >
               Watch demo
             </a>
@@ -452,6 +473,11 @@
               href="/assets/WhitePapers/FirstLook_WhitePaper.pdf"
               target="_blank"
               rel="noopener"
+              onclick="gtag('event', 'firstlook_wwhitepaper', {
+                event_category: 'firstlook',
+                event_label: 'whitepaper',
+                value: 1
+            })"
             >
               Whitepaper (PDF)
             </a>
@@ -739,14 +765,21 @@
               target="_blank"
               rel="noopener"
               style="text-align:center;"
+              onclick="gtag('event', 'vsix_download', {
+                event_category: 'firstlook',
+                event_label: 'v0.1.0_download',
+                value: 1
+                })"
             >
-              Download VS Code Extension (.vsix)
+              Download VSCode Extension (.vsix)
             </a>
 
           </div>
 
+          <!-- 👇 compact helper line -->
           <div style="margin-top:8px;font-size:12px;color:#888;">
-            After install: Right-click any file → <b>FirstLook: Add Meaning</b>
+            Install via Extensions → “...” → Install from VSIX · </br>
+            Then right-click any file → <b>Add Meaning</b>
           </div>
 
         </div>
